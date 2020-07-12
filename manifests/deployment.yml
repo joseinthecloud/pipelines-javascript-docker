@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: joseinthecloudpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: joseinthecloudpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: joseinthecloudpipelinesjavascriptdocker 
+          image: jprcontainerregistry.azurecr.io/joseinthecloudpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
